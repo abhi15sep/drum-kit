@@ -115,7 +115,41 @@ const piano = [
   }
 ];
 
+console.log(drum[0].url);
+
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      activeInstrument: undefined // remove double quotes later
+    };
+  }
+
+  changeActiveInstrument = () => {
+    // console.log();
+    let switchInstrument = document.getElementById("instrument-switch");
+    // console.log(switchInstrument);
+
+    // document.getElementById("instrument-switch").value = "piano";
+    // console.log(switchInstrument);
+
+    if (switchInstrument.checked) {
+      this.setState({
+        activeInstrument: "drumkit"
+      });
+      // console.log(this.state.activeInstrument);
+    } else {
+      this.setState({
+        activeInstrument: "piano"
+      });
+    }
+    this.stateChangeFunc();
+  };
+
+  stateChangeFunc = () => {
+    console.log(this.state.activeInstrument);
+  };
+
   render() {
     return (
       <div className="App">
@@ -166,6 +200,20 @@ class App extends Component {
               <kbd>L</kbd>
               <span className="sound">tink</span>
             </div>
+
+            <label className="switch">
+              <p style={{ display: "block" }}>piano</p>
+              <input
+                id="instrument-switch"
+                type="checkbox"
+                value="drumkit"
+                onChange={this.changeActiveInstrument}
+                style={{ display: "block" }}
+              />
+              <p style={{ display: "block" }}>drumkit</p>
+              drumkit
+              <span className="slider round" />
+            </label>
           </div>
         </div>
       </div>
