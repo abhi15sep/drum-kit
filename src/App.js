@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import "css-checkbox-library";
 import "./App.css";
+import "../node_modules/css-checkbox-library/dist/css/checkboxes.min.css";
 
 const drum = [
   {
@@ -127,7 +129,7 @@ class App extends Component {
 
   changeActiveInstrument = () => {
     // console.log();
-    let switchInstrument = document.getElementById("instrument-switch");
+    let switchInstrument = document.getElementById("ckbx-size-1");
     // console.log(switchInstrument);
 
     // document.getElementById("instrument-switch").value = "piano";
@@ -201,19 +203,18 @@ class App extends Component {
               <span className="sound">tink</span>
             </div>
 
-            <label className="switch">
-              <p style={{ display: "block" }}>piano</p>
+            <div className="ckbx-style-8 ckbx-small checkbox-div">
+              {/* <p style={{ display: "block" }}>drumkit</p> */}
               <input
-                id="instrument-switch"
                 type="checkbox"
-                value="drumkit"
+                id="ckbx-size-1"
+                value="0"
+                name="ckbx-square-1"
                 onChange={this.changeActiveInstrument}
-                style={{ display: "block" }}
               />
-              <p style={{ display: "block" }}>drumkit</p>
-              drumkit
-              <span className="slider round" />
-            </label>
+              {/* <p style={{ display: "block" }}>piano</p> */}
+              <label htmlFor="ckbx-size-1" />
+            </div>
           </div>
         </div>
       </div>
