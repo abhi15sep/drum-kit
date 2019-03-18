@@ -127,6 +127,32 @@ class App extends Component {
     };
   }
 
+  componentDidMount(e) {
+    const keys = document.querySelectorAll(".drum-pad");
+
+    //now to remove transition after key has played
+    //used forEach to loop through ALL the keys properly
+    keys.forEach(key =>
+      key.addEventListener("transitionend", removeTransition)
+    );
+
+    function playSound(e) {
+      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+      const key = document.querySelector(`.drum-pad[data-key="${e.keyCode}"]`);
+      if (!audio) return; //stop the function from running all together
+      audio.currentTime = 0; //rewind to the start
+      audio.play();
+      key.classList.add("playing");
+    }
+
+    function removeTransition(e) {
+      if (e.propertyName !== "transform") return; //skip it if its not a transform
+      this.classList.remove("playing");
+    }
+
+    window.addEventListener("keydown", playSound);
+  }
+
   changeActiveInstrument = () => {
     let switchInstrument = document.getElementById("ckbx-size-1");
 
