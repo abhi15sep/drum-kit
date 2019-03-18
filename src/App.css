@@ -19,11 +19,25 @@ kbd {
   border: 2px solid black;
   padding: 0.5rem;
   width: min-content;
+  /* background: #000000; */
+  background-image: url("https://i.postimg.cc/63CgTZBc/maxresdefault.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .drum-pad {
   margin: 0.5rem;
   padding: 0.5rem;
-  border: 2px solid black;
-  background-color: gold;
+  border: 2px solid #dddddd;
+  /* background-color: gold; */
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #dddddd;
+}
+
+.playing {
+  transform: scale(1.05);
+  transition: all 90ms;
+  border-color: gold;
+  box-shadow: 0 0 2rem gold, 0 0 2rem inset;
 }

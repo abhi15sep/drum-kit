@@ -143,6 +143,9 @@ class App extends Component {
       audio.currentTime = 0; //rewind to the start
       audio.play();
       key.classList.add("playing");
+      setTimeout(function() {
+        key.classList.remove("playing");
+      }, 100);
     }
 
     function removeTransition(e) {
