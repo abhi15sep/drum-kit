@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "css-checkbox-library";
 import "./App.css";
-import "../node_modules/css-checkbox-library/dist/css/checkboxes.min.css";
+import Instrument from "./components/Instrument";
+import SwitchInstrument from "./components/SwitchInstrument";
 
 const drum = [
   {
@@ -123,23 +123,17 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      activeInstrument: undefined // remove double quotes later
+      activeInstrument: undefined
     };
   }
 
   changeActiveInstrument = () => {
-    // console.log();
     let switchInstrument = document.getElementById("ckbx-size-1");
-    // console.log(switchInstrument);
-
-    // document.getElementById("instrument-switch").value = "piano";
-    // console.log(switchInstrument);
 
     if (switchInstrument.checked) {
       this.setState({
         activeInstrument: "drumkit"
       });
-      // console.log(this.state.activeInstrument);
     } else {
       this.setState({
         activeInstrument: "piano"
@@ -157,65 +151,8 @@ class App extends Component {
       <div className="App">
         <h1>React Drum Kit</h1>
         <div className="container">
-          <div id="drum-machine">
-            <div data-key="65" className="drum-pad">
-              <kbd>A</kbd>
-              <span className="sound">clap</span>
-            </div>
-
-            <div data-key="83" className="drum-pad">
-              <kbd>S</kbd>
-              <span className="sound">hihat</span>
-            </div>
-
-            <div data-key="68" className="drum-pad">
-              <kbd>D</kbd>
-              <span className="sound">kick</span>
-            </div>
-
-            <div data-key="70" className="drum-pad">
-              <kbd>F</kbd>
-              <span className="sound">openhat</span>
-            </div>
-
-            <div data-key="71" className="drum-pad">
-              <kbd>G</kbd>
-              <span className="sound">boom</span>
-            </div>
-
-            <div data-key="72" className="drum-pad">
-              <kbd>H</kbd>
-              <span className="sound">ride</span>
-            </div>
-
-            <div data-key="74" className="drum-pad">
-              <kbd>J</kbd>
-              <span className="sound">snare</span>
-            </div>
-
-            <div data-key="75" className="drum-pad">
-              <kbd>K</kbd>
-              <span className="sound">tom</span>
-            </div>
-
-            <div data-key="76" className="drum-pad">
-              <kbd>L</kbd>
-              <span className="sound">tink</span>
-            </div>
-
-            <div className="ckbx-style-8 ckbx-small checkbox-div">
-              {/* <p style={{ display: "block" }}>drumkit</p> */}
-              <input
-                type="checkbox"
-                id="ckbx-size-1"
-                value="0"
-                name="ckbx-square-1"
-                onChange={this.changeActiveInstrument}
-              />
-              {/* <p style={{ display: "block" }}>piano</p> */}
-              <label htmlFor="ckbx-size-1" />
-            </div>
-          </div>
+          <Instrument />
+          <SwitchInstrument />
         </div>
       </div>
     );
