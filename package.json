@@ -4,10 +4,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "css-toggle-switch": "^4.1.0",
     "gh-pages": "^2.0.1",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5"
+    "react-scripts": "^2.1.8"
   },
   "scripts": {
     "predeploy": "npm run build",

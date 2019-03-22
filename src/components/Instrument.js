@@ -36,58 +36,57 @@ export default class Instrument extends Component {
       <div id="drum-machine">
         <div data-key="81" className="drum-pad">
           <kbd>Q</kbd>
+          <audio data-key="81" src={q} />
           <span className="sound">openhat</span>
         </div>
 
         <div data-key="87" className="drum-pad">
           <kbd>W</kbd>
+          <audio data-key="87" src={w} />
           <span className="sound">boom</span>
         </div>
 
         <div data-key="69" className="drum-pad">
           <kbd>E</kbd>
+          <audio data-key="69" src={e} />
           <span className="sound">ride</span>
         </div>
 
         <div data-key="65" className="drum-pad">
           <kbd>A</kbd>
+          <audio data-key="65" src={a} />
           <span className="sound">clap</span>
         </div>
 
         <div data-key="83" className="drum-pad">
           <kbd>S</kbd>
+          <audio data-key="83" src={s} />
           <span className="sound">hihat</span>
         </div>
 
         <div data-key="68" className="drum-pad">
           <kbd>D</kbd>
+          <audio data-key="68" src={d} />
           <span className="sound">kick</span>
         </div>
 
         <div data-key="90" className="drum-pad">
           <kbd>Z</kbd>
+          <audio data-key="90" src={z} />
           <span className="sound">snare</span>
         </div>
 
         <div data-key="88" className="drum-pad">
           <kbd>X</kbd>
+          <audio data-key="88" src={x} />
           <span className="sound">tom</span>
         </div>
 
         <div data-key="67" className="drum-pad">
           <kbd>C</kbd>
+          <audio data-key="67" src={c} />
           <span className="sound">tink</span>
         </div>
-
-        <audio data-key="81" src={q} />
-        <audio data-key="87" src={w} />
-        <audio data-key="69" src={e} />
-        <audio data-key="65" src={a} />
-        <audio data-key="83" src={s} />
-        <audio data-key="68" src={d} />
-        <audio data-key="90" src={z} />
-        <audio data-key="88" src={x} />
-        <audio data-key="67" src={c} />
       </div>
     );
   }
