@@ -42,3 +42,27 @@ kbd {
   border-color: gold;
   box-shadow: 0 0 2rem gold, 0 0 2rem inset;
 }
+
+@media screen and (max-width: 800px) {
+  .container {
+    display: block;
+    margin: auto;
+  }
+
+  #drum-machine {
+    margin: auto;
+  }
+
+  #switch-instrument {
+    display: block;
+  }
+
+  #switch-instrument > h2 {
+    margin-top: 0.5rem;
+  }
+
+  .switch-light > span {
+    max-width: 50%;
+    margin: auto;
+  }
+}

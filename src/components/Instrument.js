@@ -39,7 +39,8 @@ export default class Instrument extends Component {
           userSelect: "none",
           msUserSelect: "none",
           MozUserSelect: "none",
-          WebkitUserSelect: "none"
+          WebkitUserSelect: "none",
+          margin: "auto"
         }}
       >
         <div data-key="81" className="drum-pad">

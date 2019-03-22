@@ -151,12 +151,10 @@ class App extends Component {
 
     function playSoundOnClick(e) {
       // if click event happens on drum-pad itself
-      const targetIsDrumpadItself = e.target.querySelector("audio");
+      // const targetIsDrumpadItself = e.target.querySelector("audio");
 
       // if click event happens on drum-pad children
-      const targetIsDrumpadChild = e.target.parentElement.querySelector(
-        "audio"
-      );
+      // const targetIsDrumpadChild = e.target.parentElement.querySelector("audio");
 
       // if (targetIsDrumpadItself) {
       //   targetIsDrumpadItself.currentTime = 0;
@@ -172,15 +170,18 @@ class App extends Component {
       // bubbleaudio captureaudio
       const audio1 = e.target.querySelector("audio");
       const audio2 = e.target.parentElement.querySelector("audio");
+
+      // CHECK POINTER EVENTS CSS PROPERTY FOR CLICK EVENTS
+
       // if click event happens on drum-pad itself
       if (e.target.classList.contains("drum-pad")) {
-        e.target.querySelector("audio").currentTime = 0;
-        e.target.querySelector("audio").play();
+        audio1.currentTime = 0;
+        audio1.play();
       }
       // if click event happens on drum-pad children
       else if (e.target.parentElement.classList.contains("drum-pad")) {
-        e.target.parentElement.querySelector("audio").currentTime = 0;
-        e.target.parentElement.querySelector("audio").play();
+        audio2.currentTime = 0;
+        audio2.play();
       }
     }
 
