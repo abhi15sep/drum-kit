@@ -21,17 +21,148 @@ import c from "../sounds/piano/c.mp3";
 // import x from "../sounds/piano/x.wav";
 // import c from "../sounds/piano/c.wav";
 
-let pianoNotes = [q, w, e, a, s, d, z, x, c];
+// const drum = [
+//   {
+//     keyCode: 81,
+//     keyTrigger: "Q",
+//     id: "clap",
+//     url: "./sounds/drum/clap.wav"
+//   },
+//   {
+//     keyCode: 87,
+//     keyTrigger: "W",
+//     id: "boom",
+//     url: "./sounds/drum/boom.wav"
+//   },
+//   {
+//     keyCode: 69,
+//     keyTrigger: "E",
+//     id: "hihat",
+//     url: "./sounds/drum/hihat.wav"
+//   },
+//   {
+//     keyCode: 65,
+//     keyTrigger: "A",
+//     id: "kick",
+//     url: "./sounds/drum/kick.wav"
+//   },
+//   {
+//     keyCode: 83,
+//     keyTrigger: "S",
+//     id: "openhat",
+//     url: "./sounds/drum/openhat.wav"
+//   },
+//   {
+//     keyCode: 68,
+//     keyTrigger: "D",
+//     id: "ride",
+//     url: "./sounds/drum/ride.wav"
+//   },
+//   {
+//     keyCode: 90,
+//     keyTrigger: "Z",
+//     id: "snare",
+//     url: "./sounds/drum/snare.wav"
+//   },
+//   {
+//     keyCode: 88,
+//     keyTrigger: "X",
+//     id: "tink",
+//     url: "./sounds/drum/tink.wav"
+//   },
+//   {
+//     keyCode: 67,
+//     keyTrigger: "C",
+//     id: "tom",
+//     url: "./sounds/drum/tom.wav"
+//   }
+// ];
+
+// const piano = [
+//   {
+//     keyCode: 81,
+//     keyTrigger: "Q",
+//     id: "q-key",
+//     url: "./sounds/piano/q.wav"
+//   },
+//   {
+//     keyCode: 87,
+//     keyTrigger: "W",
+//     id: "w-key",
+//     url: "./sounds/piano/w.wav"
+//   },
+//   {
+//     keyCode: 69,
+//     keyTrigger: "E",
+//     id: "e-key",
+//     url: "./sounds/piano/e.wav"
+//   },
+//   {
+//     keyCode: 65,
+//     keyTrigger: "A",
+//     id: "a-key",
+//     url: "./sounds/piano/a.wav"
+//   },
+//   {
+//     keyCode: 83,
+//     keyTrigger: "S",
+//     id: "s-key",
+//     url: "./sounds/piano/s.wav"
+//   },
+//   {
+//     keyCode: 68,
+//     keyTrigger: "D",
+//     id: "d-key",
+//     url: "./sounds/piano/d.wav"
+//   },
+//   {
+//     keyCode: 90,
+//     keyTrigger: "Z",
+//     id: "z-key",
+//     url: "./sounds/piano/z.wav"
+//   },
+//   {
+//     keyCode: 88,
+//     keyTrigger: "X",
+//     id: "x-key",
+//     url: "./sounds/piano/x.wav"
+//   },
+//   {
+//     keyCode: 67,
+//     keyTrigger: "C",
+//     id: "c-key",
+//     url: "./sounds/piano/c.wav"
+//   }
+// ];
 
 export default class Instrument extends Component {
-  // componentDidMount() {
-  //   let audioElems = document.querySelectorAll('audio');
-  //   audioElems.forEach(elem => {
-  //    elem.src = try to avoid nested loops
-  //   });
-  // }
-
   render() {
+    const { activeInstrument } = this.props;
+
+    const pianoNotes = [q, w, e, a, s, d, z, x, c];
+    const drumSounds = [
+      boom,
+      clap,
+      hihat,
+      kick,
+      openhat,
+      ride,
+      snare,
+      tink,
+      tom
+    ];
+    let soundsArray = [];
+
+    if (activeInstrument === "Piano") {
+      soundsArray = pianoNotes;
+    } else if (activeInstrument === "Drumkit") {
+      soundsArray = drumSounds;
+    }
+
+    document.querySelectorAll("audio").forEach(elem => {
+      elem.src = soundsArray.shift();
+    });
+
     return (
       <div id="drum-machine" style={{ margin: "auto" }}>
         <div data-key="81" className="drum-pad">

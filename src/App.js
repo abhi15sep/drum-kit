@@ -3,127 +3,11 @@ import "./App.css";
 import Instrument from "./components/Instrument";
 import SwitchInstrument from "./components/SwitchInstrument";
 
-const drum = [
-  {
-    keyCode: 81,
-    keyTrigger: "Q",
-    id: "clap",
-    url: "./sounds/drum/clap.wav"
-  },
-  {
-    keyCode: 87,
-    keyTrigger: "W",
-    id: "boom",
-    url: "./sounds/drum/boom.wav"
-  },
-  {
-    keyCode: 69,
-    keyTrigger: "E",
-    id: "hihat",
-    url: "./sounds/drum/hihat.wav"
-  },
-  {
-    keyCode: 65,
-    keyTrigger: "A",
-    id: "kick",
-    url: "./sounds/drum/kick.wav"
-  },
-  {
-    keyCode: 83,
-    keyTrigger: "S",
-    id: "openhat",
-    url: "./sounds/drum/openhat.wav"
-  },
-  {
-    keyCode: 68,
-    keyTrigger: "D",
-    id: "ride",
-    url: "./sounds/drum/ride.wav"
-  },
-  {
-    keyCode: 90,
-    keyTrigger: "Z",
-    id: "snare",
-    url: "./sounds/drum/snare.wav"
-  },
-  {
-    keyCode: 88,
-    keyTrigger: "X",
-    id: "tink",
-    url: "./sounds/drum/tink.wav"
-  },
-  {
-    keyCode: 67,
-    keyTrigger: "C",
-    id: "tom",
-    url: "./sounds/drum/tom.wav"
-  }
-];
-
-const piano = [
-  {
-    keyCode: 81,
-    keyTrigger: "Q",
-    id: "q-key",
-    url: "./sounds/piano/q.wav"
-  },
-  {
-    keyCode: 87,
-    keyTrigger: "W",
-    id: "w-key",
-    url: "./sounds/piano/w.wav"
-  },
-  {
-    keyCode: 69,
-    keyTrigger: "E",
-    id: "e-key",
-    url: "./sounds/piano/e.wav"
-  },
-  {
-    keyCode: 65,
-    keyTrigger: "A",
-    id: "a-key",
-    url: "./sounds/piano/a.wav"
-  },
-  {
-    keyCode: 83,
-    keyTrigger: "S",
-    id: "s-key",
-    url: "./sounds/piano/s.wav"
-  },
-  {
-    keyCode: 68,
-    keyTrigger: "D",
-    id: "d-key",
-    url: "./sounds/piano/d.wav"
-  },
-  {
-    keyCode: 90,
-    keyTrigger: "Z",
-    id: "z-key",
-    url: "./sounds/piano/z.wav"
-  },
-  {
-    keyCode: 88,
-    keyTrigger: "X",
-    id: "x-key",
-    url: "./sounds/piano/x.wav"
-  },
-  {
-    keyCode: 67,
-    keyTrigger: "C",
-    id: "c-key",
-    url: "./sounds/piano/c.wav"
-  }
-];
-
-console.log(drum[0].url);
-
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      activeInstrument: undefined
+      activeInstrument: "Piano"
     };
   }
 
@@ -166,32 +50,37 @@ class App extends Component {
     window.addEventListener("click", playSoundOnClick);
   }
 
-  changeActiveInstrument = () => {
-    let switchInstrument = document.getElementById("ckbx-size-1");
+  changeActiveInstrument = e => {
+    // let switchInstrument = document.getElementById("");
+    const pianoIdVar = document.getElementById("pianoId");
+    const drumIdVar = document.getElementById("drumId");
 
-    if (switchInstrument.checked) {
+    if (e.target.id === "drumId") {
+      drumIdVar.classList.remove("disabled-switch");
+      pianoIdVar.classList.remove("enabled-switch");
+      drumIdVar.classList.add("enabled-switch");
+      pianoIdVar.classList.add("disabled-switch");
       this.setState({
-        activeInstrument: "drumkit"
+        activeInstrument: "Drumkit"
       });
-    } else {
+    } else if (e.target.id === "pianoId") {
+      pianoIdVar.classList.remove("disabled-switch");
+      drumIdVar.classList.remove("enabled-switch");
+      pianoIdVar.classList.add("enabled-switch");
+      drumIdVar.classList.add("disabled-switch");
       this.setState({
-        activeInstrument: "piano"
+        activeInstrument: "Piano"
       });
     }
-    this.stateChangeFunc();
-  };
-
-  stateChangeFunc = () => {
-    console.log(this.state.activeInstrument);
   };
 
   render() {
     return (
       <div className="App">
-        <h1>React Drum Kit</h1>
+        <h1>{this.state.activeInstrument}</h1>
         <div className="container">
-          <Instrument />
-          <SwitchInstrument />
+          <Instrument activeInstrument={this.state.activeInstrument} />
+          <SwitchInstrument changeInstrument={this.changeActiveInstrument} />
         </div>
       </div>
     );

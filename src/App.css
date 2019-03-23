@@ -54,6 +54,40 @@ kbd {
   transition: all 100ms ease-in-out;
 }
 
+.enabled-switch {
+  /* faint top #94D591 */
+  /* dark bottom #72C76D */
+  background: linear-gradient(to bottom, #94d581, #72c76d);
+}
+
+.disabled-switch {
+  background: linear-gradient(to bottom, #3f3f3f, #000000);
+  color: #eeeeee;
+}
+
+#pianoId {
+  border-radius: 3px 0 0 3px;
+  border: 2px solid black;
+  border-right: 1px solid black;
+}
+
+#drumId {
+  border-radius: 0 3px 3px 0;
+  border: 2px solid black;
+  border-left: 1px solid black;
+}
+
+.switcher {
+  width: 100px;
+  font-weight: bold;
+  height: auto;
+  /* border-radius: 3px; */
+  padding: 0.25rem;
+  margin: auto 0;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
 @media screen and (max-width: 800px) {
   .container {
     display: block;
