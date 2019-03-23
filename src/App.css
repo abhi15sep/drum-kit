@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
 }
 
 .container {
@@ -34,13 +39,19 @@ kbd {
   background-color: rgba(0, 0, 0, 0.65);
   text-shadow: 0 0 10px #000000;
   color: #dddddd;
+  overflow: hidden;
+}
+
+/* so all click events inside .drum-pad will happen on .drum-pad itself */
+.drum-pad > * {
+  pointer-events: none;
 }
 
 .playing {
   transform: scale(1.05);
-  transition: all 90ms;
   border-color: gold;
   box-shadow: 0 0 2rem gold, 0 0 2rem inset;
+  transition: all 100ms ease-in-out;
 }
 
 @media screen and (max-width: 800px) {
@@ -64,5 +75,24 @@ kbd {
   .switch-light > span {
     max-width: 50%;
     margin: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #drum-machine {
+    grid-template-columns: 110px 110px 110px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #drum-machine {
+    grid-template-columns: 100px 100px 100px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #drum-machine {
+    grid-template-columns: 85px 85px 85px;
+    font-size: 0.85rem;
   }
 }

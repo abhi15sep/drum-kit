@@ -33,16 +33,7 @@ export default class Instrument extends Component {
 
   render() {
     return (
-      <div
-        id="drum-machine"
-        style={{
-          userSelect: "none",
-          msUserSelect: "none",
-          MozUserSelect: "none",
-          WebkitUserSelect: "none",
-          margin: "auto"
-        }}
-      >
+      <div id="drum-machine" style={{ margin: "auto" }}>
         <div data-key="81" className="drum-pad">
           <kbd>Q</kbd>
           <audio data-key="81" src={q} />

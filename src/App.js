@@ -131,12 +131,6 @@ class App extends Component {
     const keys = document.querySelectorAll(".drum-pad");
     const drumMachine = document.getElementById("drum-machine");
 
-    //now to remove transition after key has played
-    //used forEach to loop through ALL the keys properly
-    keys.forEach(key =>
-      key.addEventListener("transitionend", removeTransition)
-    );
-
     function playSound(e) {
       const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
       const key = document.querySelector(`.drum-pad[data-key="${e.keyCode}"]`);
@@ -144,44 +138,16 @@ class App extends Component {
       audio.currentTime = 0; //rewind to the start
       audio.play();
       key.classList.add("playing");
-      setTimeout(function() {
-        key.classList.remove("playing");
-      }, 100);
     }
 
     function playSoundOnClick(e) {
-      // if click event happens on drum-pad itself
-      // const targetIsDrumpadItself = e.target.querySelector("audio");
+      const audioElem = e.target.querySelector("audio");
 
-      // if click event happens on drum-pad children
-      // const targetIsDrumpadChild = e.target.parentElement.querySelector("audio");
-
-      // if (targetIsDrumpadItself) {
-      //   targetIsDrumpadItself.currentTime = 0;
-      //   targetIsDrumpadItself.play();
-      // } else if (targetIsDrumpadChild) {
-      //   targetIsDrumpadChild.currentTime = 0;
-      //   targetIsDrumpadChild.play();
-      // } else {
-      //   return;
-      // }
-
-      // alternate approach
-      // bubbleaudio captureaudio
-      const audio1 = e.target.querySelector("audio");
-      const audio2 = e.target.parentElement.querySelector("audio");
-
-      // CHECK POINTER EVENTS CSS PROPERTY FOR CLICK EVENTS
-
-      // if click event happens on drum-pad itself
+      // added pointer-events: none to .drum-pad children so all click events will happen on .drum-pad itself
       if (e.target.classList.contains("drum-pad")) {
-        audio1.currentTime = 0;
-        audio1.play();
-      }
-      // if click event happens on drum-pad children
-      else if (e.target.parentElement.classList.contains("drum-pad")) {
-        audio2.currentTime = 0;
-        audio2.play();
+        e.target.classList.add("playing");
+        audioElem.currentTime = 0;
+        audioElem.play();
       }
     }
 
@@ -189,6 +155,12 @@ class App extends Component {
       if (e.propertyName !== "transform") return; //skip it if its not a transform
       this.classList.remove("playing");
     }
+
+    //now to remove transition after key has played
+    //used forEach to loop through ALL the keys properly
+    keys.forEach(key =>
+      key.addEventListener("transitionend", removeTransition)
+    );
 
     window.addEventListener("keydown", playSound);
     window.addEventListener("click", playSoundOnClick);
