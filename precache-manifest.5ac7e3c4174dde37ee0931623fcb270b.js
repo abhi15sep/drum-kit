@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "4d5e5a8aa8dcb1a6f3c247d685ec4ebb",
-    "url": "/drum-kit/static/media/x.4d5e5a8a.mp3"
+    "revision": "5db40345cfdc64de1bef76d1c23bb0a2",
+    "url": "/drum-kit/static/media/x.5db40345.wav"
   },
   {
-    "revision": "16797667810e2ef4c489",
-    "url": "/drum-kit/static/css/main.b26d32a4.chunk.css"
+    "revision": "8d270d69e9b3de6a5bcd",
+    "url": "/drum-kit/static/css/main.b719b772.chunk.css"
   },
   {
     "revision": "7b6327eefb8c5630e0e5",
@@ -44,20 +44,20 @@ self.__precacheManifest = [
     "url": "/drum-kit/static/media/z.9eb8d6f7.wav"
   },
   {
-    "revision": "16797667810e2ef4c489",
-    "url": "/drum-kit/static/js/main.b8793c36.chunk.js"
+    "revision": "8d270d69e9b3de6a5bcd",
+    "url": "/drum-kit/static/js/main.66f9819b.chunk.js"
   },
   {
-    "revision": "3c8ca9470540bbbea8eaa187bfe82a39",
-    "url": "/drum-kit/static/media/c.3c8ca947.mp3"
-  },
-  {
-    "revision": "550be808a1e25f5b4db6b66350270316",
-    "url": "/drum-kit/static/media/boom.550be808.wav"
+    "revision": "bb267ae50c88ee6dc0d05208b1d60957",
+    "url": "/drum-kit/static/media/c.bb267ae5.wav"
   },
   {
     "revision": "a6e86dd7c2d3dee1ec0ad70c0d69df36",
     "url": "/drum-kit/static/media/clap.a6e86dd7.wav"
+  },
+  {
+    "revision": "550be808a1e25f5b4db6b66350270316",
+    "url": "/drum-kit/static/media/boom.550be808.wav"
   },
   {
     "revision": "4ba39e07d1f8d98b362b9b65d6544538",
@@ -88,7 +88,7 @@ self.__precacheManifest = [
     "url": "/drum-kit/static/media/tom.572ed39d.wav"
   },
   {
-    "revision": "389959bad3d55cd40ba5842e46030b84",
+    "revision": "b5041f17f1f34541a9c91577f5137f9a",
     "url": "/drum-kit/index.html"
   }
 ];
