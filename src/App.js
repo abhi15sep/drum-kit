@@ -7,13 +7,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      activeInstrument: "Piano"
+      activeInstrument: "Piano",
+      lastSound: ""
     };
   }
 
-  componentDidMount(e) {
+  componentDidMount() {
     const keys = document.querySelectorAll(".drum-pad");
-    const drumMachine = document.getElementById("drum-machine");
 
     function playSound(e) {
       const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
@@ -49,6 +49,13 @@ class App extends Component {
     window.addEventListener("keydown", playSound);
     window.addEventListener("click", playSoundOnClick);
   }
+
+  // changeText = e => {
+  //   let someVar = e.target.querySelector(
+  //     `.drum-pad[data-key="${e.keyCode}"] .sound-name`
+  //   ).textContent;
+  //   console.log(someVar);
+  // };
 
   changeActiveInstrument = e => {
     // let switchInstrument = document.getElementById("");

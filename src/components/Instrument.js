@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import boom from "../sounds/drum/boom.wav";
 import clap from "../sounds/drum/clap.wav";
+import boom from "../sounds/drum/boom.wav";
 import hihat from "../sounds/drum/hihat.wav";
 import kick from "../sounds/drum/kick.wav";
 import openhat from "../sounds/drum/openhat.wav";
@@ -16,207 +16,214 @@ import a from "../sounds/piano/a.wav";
 import s from "../sounds/piano/s.wav";
 import d from "../sounds/piano/d.wav";
 import z from "../sounds/piano/z.wav";
-import x from "../sounds/piano/x.mp3";
-import c from "../sounds/piano/c.mp3";
-// import x from "../sounds/piano/x.wav";
-// import c from "../sounds/piano/c.wav";
+import x from "../sounds/piano/x.wav";
+import c from "../sounds/piano/c.wav";
 
-// const drum = [
-//   {
-//     keyCode: 81,
-//     keyTrigger: "Q",
-//     id: "clap",
-//     url: "./sounds/drum/clap.wav"
-//   },
-//   {
-//     keyCode: 87,
-//     keyTrigger: "W",
-//     id: "boom",
-//     url: "./sounds/drum/boom.wav"
-//   },
-//   {
-//     keyCode: 69,
-//     keyTrigger: "E",
-//     id: "hihat",
-//     url: "./sounds/drum/hihat.wav"
-//   },
-//   {
-//     keyCode: 65,
-//     keyTrigger: "A",
-//     id: "kick",
-//     url: "./sounds/drum/kick.wav"
-//   },
-//   {
-//     keyCode: 83,
-//     keyTrigger: "S",
-//     id: "openhat",
-//     url: "./sounds/drum/openhat.wav"
-//   },
-//   {
-//     keyCode: 68,
-//     keyTrigger: "D",
-//     id: "ride",
-//     url: "./sounds/drum/ride.wav"
-//   },
-//   {
-//     keyCode: 90,
-//     keyTrigger: "Z",
-//     id: "snare",
-//     url: "./sounds/drum/snare.wav"
-//   },
-//   {
-//     keyCode: 88,
-//     keyTrigger: "X",
-//     id: "tink",
-//     url: "./sounds/drum/tink.wav"
-//   },
-//   {
-//     keyCode: 67,
-//     keyTrigger: "C",
-//     id: "tom",
-//     url: "./sounds/drum/tom.wav"
-//   }
-// ];
+const drumCollection = [
+  {
+    keyCode: 81,
+    keyTrigger: "Q",
+    id: "clap",
+    src: clap
+  },
+  {
+    keyCode: 87,
+    keyTrigger: "W",
+    id: "boom",
+    src: boom
+  },
+  {
+    keyCode: 69,
+    keyTrigger: "E",
+    id: "hihat",
+    src: hihat
+  },
+  {
+    keyCode: 65,
+    keyTrigger: "A",
+    id: "kick",
+    src: kick
+  },
+  {
+    keyCode: 83,
+    keyTrigger: "S",
+    id: "openhat",
+    src: openhat
+  },
+  {
+    keyCode: 68,
+    keyTrigger: "D",
+    id: "ride",
+    src: ride
+  },
+  {
+    keyCode: 90,
+    keyTrigger: "Z",
+    id: "snare",
+    src: snare
+  },
+  {
+    keyCode: 88,
+    keyTrigger: "X",
+    id: "tink",
+    src: tink
+  },
+  {
+    keyCode: 67,
+    keyTrigger: "C",
+    id: "tom",
+    src: tom
+  }
+];
 
-// const piano = [
-//   {
-//     keyCode: 81,
-//     keyTrigger: "Q",
-//     id: "q-key",
-//     url: "./sounds/piano/q.wav"
-//   },
-//   {
-//     keyCode: 87,
-//     keyTrigger: "W",
-//     id: "w-key",
-//     url: "./sounds/piano/w.wav"
-//   },
-//   {
-//     keyCode: 69,
-//     keyTrigger: "E",
-//     id: "e-key",
-//     url: "./sounds/piano/e.wav"
-//   },
-//   {
-//     keyCode: 65,
-//     keyTrigger: "A",
-//     id: "a-key",
-//     url: "./sounds/piano/a.wav"
-//   },
-//   {
-//     keyCode: 83,
-//     keyTrigger: "S",
-//     id: "s-key",
-//     url: "./sounds/piano/s.wav"
-//   },
-//   {
-//     keyCode: 68,
-//     keyTrigger: "D",
-//     id: "d-key",
-//     url: "./sounds/piano/d.wav"
-//   },
-//   {
-//     keyCode: 90,
-//     keyTrigger: "Z",
-//     id: "z-key",
-//     url: "./sounds/piano/z.wav"
-//   },
-//   {
-//     keyCode: 88,
-//     keyTrigger: "X",
-//     id: "x-key",
-//     url: "./sounds/piano/x.wav"
-//   },
-//   {
-//     keyCode: 67,
-//     keyTrigger: "C",
-//     id: "c-key",
-//     url: "./sounds/piano/c.wav"
-//   }
-// ];
+const pianoCollection = [
+  {
+    keyCode: 81,
+    keyTrigger: "Q",
+    id: "Chord A",
+    src: q
+  },
+  {
+    keyCode: 87,
+    keyTrigger: "W",
+    id: "Chord B",
+    src: w
+  },
+  {
+    keyCode: 69,
+    keyTrigger: "E",
+    id: "Chord C",
+    src: e
+  },
+  {
+    keyCode: 65,
+    keyTrigger: "A",
+    id: "Chord D",
+    src: a
+  },
+  {
+    keyCode: 83,
+    keyTrigger: "S",
+    id: "Chord E",
+    src: s
+  },
+  {
+    keyCode: 68,
+    keyTrigger: "D",
+    id: "Chord E#",
+    src: d
+  },
+  {
+    keyCode: 90,
+    keyTrigger: "Z",
+    id: "Chord F",
+    src: z
+  },
+  {
+    keyCode: 88,
+    keyTrigger: "X",
+    id: "Chord G",
+    src: x
+  },
+  {
+    keyCode: 67,
+    keyTrigger: "C",
+    id: "Chord G#",
+    src: c
+  }
+];
 
 export default class Instrument extends Component {
   render() {
     const { activeInstrument } = this.props;
 
-    const pianoNotes = [q, w, e, a, s, d, z, x, c];
-    const drumSounds = [
-      boom,
-      clap,
-      hihat,
-      kick,
-      openhat,
-      ride,
-      snare,
-      tink,
-      tom
-    ];
+    // const pianoNotes = [q, w, e, a, s, d, z, x, c];
+    // const drumSounds = [
+    //   boom,
+    //   clap,
+    //   hihat,
+    //   kick,
+    //   openhat,
+    //   ride,
+    //   snare,
+    //   tink,
+    //   tom
+    // ];
     let soundsArray = [];
 
     if (activeInstrument === "Piano") {
-      soundsArray = pianoNotes;
+      soundsArray = pianoCollection;
     } else if (activeInstrument === "Drumkit") {
-      soundsArray = drumSounds;
+      soundsArray = drumCollection;
     }
 
-    document.querySelectorAll("audio").forEach(elem => {
-      elem.src = soundsArray.shift();
+    const audioElemArray = document.querySelectorAll("audio");
+    const spanSoundNames = document.querySelectorAll(".sound-name");
+
+    // Adds sound name to the keys
+    spanSoundNames.forEach(
+      (elem, index) => (elem.textContent = soundsArray[index].id)
+    );
+
+    // Adds src to the audio tags
+    audioElemArray.forEach((elem, index) => {
+      elem.src = soundsArray[index].src;
     });
 
     return (
       <div id="drum-machine" style={{ margin: "auto" }}>
-        <div data-key="81" className="drum-pad">
+        <div data-key="81" className="drum-pad" id="sound1">
           <kbd>Q</kbd>
-          <audio data-key="81" src={q} />
-          <span className="sound">openhat</span>
+          <audio id="q" className="clip" data-key="81" src={q} />
+          <span className="sound-name">Chord A</span>
         </div>
 
-        <div data-key="87" className="drum-pad">
+        <div data-key="87" className="drum-pad" id="sound2">
           <kbd>W</kbd>
-          <audio data-key="87" src={w} />
-          <span className="sound">boom</span>
+          <audio id="w" className="clip" data-key="87" src={w} />
+          <span className="sound-name">Chord B</span>
         </div>
 
-        <div data-key="69" className="drum-pad">
+        <div data-key="69" className="drum-pad" id="sound3">
           <kbd>E</kbd>
-          <audio data-key="69" src={e} />
-          <span className="sound">ride</span>
+          <audio id="e" className="clip" data-key="69" src={e} />
+          <span className="sound-name">Chord C</span>
         </div>
 
-        <div data-key="65" className="drum-pad">
+        <div data-key="65" className="drum-pad" id="sound4">
           <kbd>A</kbd>
-          <audio data-key="65" src={a} />
-          <span className="sound">clap</span>
+          <audio id="a" className="clip" data-key="65" src={a} />
+          <span className="sound-name">Chord D</span>
         </div>
 
-        <div data-key="83" className="drum-pad">
+        <div data-key="83" className="drum-pad" id="sound5">
           <kbd>S</kbd>
-          <audio data-key="83" src={s} />
-          <span className="sound">hihat</span>
+          <audio id="s" className="clip" data-key="83" src={s} />
+          <span className="sound-name">Chord E</span>
         </div>
 
-        <div data-key="68" className="drum-pad">
+        <div data-key="68" className="drum-pad" id="sound6">
           <kbd>D</kbd>
-          <audio data-key="68" src={d} />
-          <span className="sound">kick</span>
+          <audio id="d" className="clip" data-key="68" src={d} />
+          <span className="sound-name">Chord E#</span>
         </div>
 
-        <div data-key="90" className="drum-pad">
+        <div data-key="90" className="drum-pad" id="sound7">
           <kbd>Z</kbd>
-          <audio data-key="90" src={z} />
-          <span className="sound">snare</span>
+          <audio id="z" className="clip" data-key="90" src={z} />
+          <span className="sound-name">Chord F</span>
         </div>
 
-        <div data-key="88" className="drum-pad">
+        <div data-key="88" className="drum-pad" id="sound8">
           <kbd>X</kbd>
-          <audio data-key="88" src={x} />
-          <span className="sound">tom</span>
+          <audio id="x" className="clip" data-key="88" src={x} />
+          <span className="sound-name">Chord G</span>
         </div>
 
-        <div data-key="67" className="drum-pad">
+        <div data-key="67" className="drum-pad" id="sound9">
           <kbd>C</kbd>
-          <audio data-key="67" src={c} />
-          <span className="sound">tink</span>
+          <audio id="c" className="clip" data-key="67" src={c} />
+          <span className="sound-name">Chord G#</span>
         </div>
       </div>
     );

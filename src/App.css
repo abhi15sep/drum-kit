@@ -47,6 +47,10 @@ kbd {
   pointer-events: none;
 }
 
+.sound-name {
+  text-transform: capitalize;
+}
+
 .playing {
   transform: scale(1.05);
   border-color: gold;
@@ -88,6 +92,17 @@ kbd {
   transition: all 200ms;
 }
 
+#display {
+  height: auto;
+  width: 10rem;
+  margin: auto;
+  padding: 0.25rem;
+  background: #000000;
+  color: #dddddd;
+  border: 2px solid #000000;
+  border-radius: 3px;
+}
+
 @media screen and (max-width: 800px) {
   .container {
     display: block;
@@ -100,10 +115,6 @@ kbd {
 
   #switch-instrument {
     display: block;
-  }
-
-  #switch-instrument > h2 {
-    margin-top: 0.5rem;
   }
 
   .switch-light > span {
