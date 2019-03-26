@@ -7,8 +7,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      activeInstrument: "Piano",
-      lastSound: ""
+      activeInstrument: "Piano"
     };
   }
 
@@ -16,12 +15,18 @@ class App extends Component {
     const keys = document.querySelectorAll(".drum-pad");
 
     function playSound(e) {
+      e.preventDefault();
       const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
       const key = document.querySelector(`.drum-pad[data-key="${e.keyCode}"]`);
       if (!audio) return; //stop the function from running altogether
       audio.currentTime = 0; //rewind to the start
       audio.play();
       key.classList.add("playing");
+
+      // To display the name of sound on element with #display
+      let displaySoundNameElem = document.querySelector("#display");
+      let currentKeySpan = key.querySelector(".sound-name");
+      displaySoundNameElem.textContent = currentKeySpan.textContent;
     }
 
     function playSoundOnClick(e) {
@@ -29,9 +34,14 @@ class App extends Component {
 
       // added pointer-events: none to .drum-pad children so all click events will happen on .drum-pad itself
       if (e.target.classList.contains("drum-pad")) {
+        e.preventDefault();
         e.target.classList.add("playing");
         audioElem.currentTime = 0;
         audioElem.play();
+        let displaySoundNameElem = document.querySelector("#display");
+        displaySoundNameElem.textContent = e.target.querySelector(
+          ".sound-name"
+        ).textContent;
       }
     }
 
@@ -49,13 +59,6 @@ class App extends Component {
     window.addEventListener("keydown", playSound);
     window.addEventListener("click", playSoundOnClick);
   }
-
-  // changeText = e => {
-  //   let someVar = e.target.querySelector(
-  //     `.drum-pad[data-key="${e.keyCode}"] .sound-name`
-  //   ).textContent;
-  //   console.log(someVar);
-  // };
 
   changeActiveInstrument = e => {
     // let switchInstrument = document.getElementById("");

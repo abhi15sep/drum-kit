@@ -137,18 +137,6 @@ export default class Instrument extends Component {
   render() {
     const { activeInstrument } = this.props;
 
-    // const pianoNotes = [q, w, e, a, s, d, z, x, c];
-    // const drumSounds = [
-    //   boom,
-    //   clap,
-    //   hihat,
-    //   kick,
-    //   openhat,
-    //   ride,
-    //   snare,
-    //   tink,
-    //   tom
-    // ];
     let soundsArray = [];
 
     if (activeInstrument === "Piano") {
@@ -160,69 +148,69 @@ export default class Instrument extends Component {
     const audioElemArray = document.querySelectorAll("audio");
     const spanSoundNames = document.querySelectorAll(".sound-name");
 
-    // Adds sound name to the keys
-    spanSoundNames.forEach(
-      (elem, index) => (elem.textContent = soundsArray[index].id)
-    );
-
     // Adds src to the audio tags
     audioElemArray.forEach((elem, index) => {
       elem.src = soundsArray[index].src;
     });
 
+    // Adds sound name to the keys
+    spanSoundNames.forEach(
+      (elem, index) => (elem.textContent = soundsArray[index].id)
+    );
+
     return (
       <div id="drum-machine" style={{ margin: "auto" }}>
         <div data-key="81" className="drum-pad" id="sound1">
-          <kbd>Q</kbd>
-          <audio id="q" className="clip" data-key="81" src={q} />
+          Q
+          <audio id="Q" className="clip" data-key="81" src={q} />
           <span className="sound-name">Chord A</span>
         </div>
 
         <div data-key="87" className="drum-pad" id="sound2">
-          <kbd>W</kbd>
-          <audio id="w" className="clip" data-key="87" src={w} />
+          W
+          <audio id="W" className="clip" data-key="87" src={w} />
           <span className="sound-name">Chord B</span>
         </div>
 
         <div data-key="69" className="drum-pad" id="sound3">
-          <kbd>E</kbd>
-          <audio id="e" className="clip" data-key="69" src={e} />
+          E
+          <audio id="E" className="clip" data-key="69" src={e} />
           <span className="sound-name">Chord C</span>
         </div>
 
         <div data-key="65" className="drum-pad" id="sound4">
-          <kbd>A</kbd>
-          <audio id="a" className="clip" data-key="65" src={a} />
+          A
+          <audio id="A" className="clip" data-key="65" src={a} />
           <span className="sound-name">Chord D</span>
         </div>
 
         <div data-key="83" className="drum-pad" id="sound5">
-          <kbd>S</kbd>
-          <audio id="s" className="clip" data-key="83" src={s} />
+          S
+          <audio id="S" className="clip" data-key="83" src={s} />
           <span className="sound-name">Chord E</span>
         </div>
 
         <div data-key="68" className="drum-pad" id="sound6">
-          <kbd>D</kbd>
-          <audio id="d" className="clip" data-key="68" src={d} />
+          D
+          <audio id="D" className="clip" data-key="68" src={d} />
           <span className="sound-name">Chord E#</span>
         </div>
 
         <div data-key="90" className="drum-pad" id="sound7">
-          <kbd>Z</kbd>
-          <audio id="z" className="clip" data-key="90" src={z} />
+          Z
+          <audio id="Z" className="clip" data-key="90" src={z} />
           <span className="sound-name">Chord F</span>
         </div>
 
         <div data-key="88" className="drum-pad" id="sound8">
-          <kbd>X</kbd>
-          <audio id="x" className="clip" data-key="88" src={x} />
+          X
+          <audio id="X" className="clip" data-key="88" src={x} />
           <span className="sound-name">Chord G</span>
         </div>
 
         <div data-key="67" className="drum-pad" id="sound9">
-          <kbd>C</kbd>
-          <audio id="c" className="clip" data-key="67" src={c} />
+          C
+          <audio id="C" className="clip" data-key="67" src={c} />
           <span className="sound-name">Chord G#</span>
         </div>
       </div>

@@ -5,7 +5,7 @@ export default class SwitchInstrument extends Component {
     const { changeInstrument } = this.props;
     return (
       <div id="switch-instrument" style={{ display: "block", margin: "auto" }}>
-        <h2>Switch Instrument</h2>
+        <h3>Switch Instrument</h3>
 
         <div
           id="switch-container"
