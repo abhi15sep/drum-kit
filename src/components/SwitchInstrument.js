@@ -5,7 +5,11 @@ export default class SwitchInstrument extends Component {
     const { changeInstrument } = this.props;
     return (
       <div id="switch-instrument" style={{ display: "block", margin: "auto" }}>
-        <h3>Switch Instrument</h3>
+        <div id="display" style={{ display: "flex", justifyContent: "center" }}>
+          Yahallo!
+        </div>
+
+        <h3 style={{ margin: "0.5rem auto" }}>Switch Instrument</h3>
 
         <div
           id="switch-container"
@@ -25,9 +29,6 @@ export default class SwitchInstrument extends Component {
           >
             Drumkit
           </div>
-        </div>
-        <div id="display" style={{ display: "flex", justifyContent: "center" }}>
-          Yahallo!
         </div>
       </div>
     );
