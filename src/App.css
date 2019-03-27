@@ -114,11 +114,19 @@ kbd {
   #drum-machine {
     grid-template-columns: 100px 100px 100px;
   }
+
+  .sound-name {
+    font-size: 0.7rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
   #drum-machine {
     grid-template-columns: 85px 85px 85px;
     font-size: 0.85rem;
+  }
+
+  .sound-name {
+    font-size: 0.65rem;
   }
 }
