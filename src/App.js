@@ -20,13 +20,13 @@ class App extends Component {
     function playSound(e) {
       const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
       const key = document.querySelector(`.drum-pad[data-key="${e.keyCode}"]`);
-      const currentKeySpan = key.querySelector(".sound-name");
-
+      // if (!currentKeySpan) return;
       if (!audio) return; //stop the function from running altogether
       audio.currentTime = 0; //rewind to the start
       audio.play();
       key.classList.add("playing");
 
+      const currentKeySpan = key.querySelector(".sound-name");
       displaySoundNameElem.textContent = currentKeySpan.textContent;
     }
 
@@ -86,7 +86,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>{this.state.activeInstrument}</h1>
+        <h1 id="heading">{this.state.activeInstrument}</h1>
         <div className="container">
           <Instrument activeInstrument={this.state.activeInstrument} />
           <SwitchInstrument changeInstrument={this.changeActiveInstrument} />
