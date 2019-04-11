@@ -4,7 +4,10 @@ export default class SwitchInstrument extends Component {
   render() {
     const { changeInstrument } = this.props;
     return (
-      <div id="switch-instrument" style={{ display: "block", margin: "auto" }}>
+      <div
+        id="switch-instrument"
+        style={{ display: "block", margin: "auto", marginBottom: "10vh" }}
+      >
         <div id="display" style={{ display: "flex", justifyContent: "center" }}>
           Yahallo!
         </div>
