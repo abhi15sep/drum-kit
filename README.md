@@ -6,6 +6,10 @@ Here is the link to the live version of this project - [React Drumkit/Piano](htt
 
 **Note regarding FCC Test Suite -** This project will NOT pass all the tests on the FCC Test Suite for 'Drum Machine' as I had to compromise on clearing a few test cases for providing a better user experience. This project specifically fails test #3 and #4 on 'Drum Machine'.
 
+## Credits -
+
+Logo Vector taken from [PNGtree](https://pngtree.com/free-vectors).
+
 ## Available Scripts
 
 In the project directory, you can run:
