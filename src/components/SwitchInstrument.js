@@ -6,15 +6,13 @@ export default class SwitchInstrument extends Component {
     return (
       <div
         id="switch-instrument"
-        style={{ display: "block", margin: "auto", marginBottom: "10vh" }}
+        style={{ display: "block", margin: "auto", marginBottom: "5vh" }}
       >
         <div id="display" style={{ display: "flex", justifyContent: "center" }}>
           Yahallo!
         </div>
 
-        <h2 id="switch-heading" style={{ margin: "0.5rem auto" }}>
-          Switch Instrument
-        </h2>
+        <h3 id="switch-heading">Switch Instrument</h3>
 
         <div
           id="switch-container"
