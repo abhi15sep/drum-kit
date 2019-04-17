@@ -161,55 +161,55 @@ export default class Instrument extends Component {
     return (
       <div id="drum-machine" style={{ margin: "auto" }}>
         <div data-key="81" className="drum-pad" id="sound1">
-          Q
+          <span className="keyboard-key">Q</span>
           <audio id="Q" className="clip" data-key="81" src={q} />
           <span className="sound-name">Chord A</span>
         </div>
 
         <div data-key="87" className="drum-pad" id="sound2">
-          W
+          <span className="keyboard-key">W</span>
           <audio id="W" className="clip" data-key="87" src={w} />
           <span className="sound-name">Chord B</span>
         </div>
 
         <div data-key="69" className="drum-pad" id="sound3">
-          E
+          <span className="keyboard-key">E</span>
           <audio id="E" className="clip" data-key="69" src={e} />
           <span className="sound-name">Chord C</span>
         </div>
 
         <div data-key="65" className="drum-pad" id="sound4">
-          A
+          <span className="keyboard-key">A</span>
           <audio id="A" className="clip" data-key="65" src={a} />
           <span className="sound-name">Chord D</span>
         </div>
 
         <div data-key="83" className="drum-pad" id="sound5">
-          S
+          <span className="keyboard-key">S</span>
           <audio id="S" className="clip" data-key="83" src={s} />
           <span className="sound-name">Chord E</span>
         </div>
 
         <div data-key="68" className="drum-pad" id="sound6">
-          D
+          <span className="keyboard-key">D</span>
           <audio id="D" className="clip" data-key="68" src={d} />
           <span className="sound-name">Chord E#</span>
         </div>
 
         <div data-key="90" className="drum-pad" id="sound7">
-          Z
+          <span className="keyboard-key">Z</span>
           <audio id="Z" className="clip" data-key="90" src={z} />
           <span className="sound-name">Chord F</span>
         </div>
 
         <div data-key="88" className="drum-pad" id="sound8">
-          X
+          <span className="keyboard-key">X</span>
           <audio id="X" className="clip" data-key="88" src={x} />
           <span className="sound-name">Chord G</span>
         </div>
 
         <div data-key="67" className="drum-pad" id="sound9">
-          C
+          <span className="keyboard-key">C</span>
           <audio id="C" className="clip" data-key="67" src={c} />
           <span className="sound-name">Chord G#</span>
         </div>

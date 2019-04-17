@@ -12,9 +12,9 @@ export default class SwitchInstrument extends Component {
           Yahallo!
         </div>
 
-        <h3 id="switch-heading" style={{ margin: "0.5rem auto" }}>
+        <h2 id="switch-heading" style={{ margin: "0.5rem auto" }}>
           Switch Instrument
-        </h3>
+        </h2>
 
         <div
           id="switch-container"
