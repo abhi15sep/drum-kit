@@ -4,11 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Here is the link to the live version of this project - [React Drumkit/Piano](https://abhishekakade.github.io/drum-kit/)
 
-**Note regarding FCC Test Suite -** This project will NOT pass all the tests on the FCC Test Suite for 'Drum Machine' as I had to compromise on clearing a few test cases for providing a better user experience. This project specifically fails test #3 and #4 on 'Drum Machine'.
+~**Note regarding FCC Test Suite -** This project will NOT pass all the tests on the FCC Test Suite for 'Drum Machine' as I had to compromise on clearing a few test cases for providing a better user experience. This project specifically fails test #3 and #4 on 'Drum Machine'.~ Removed FCC Test Suite as it was causing problems with the Audit scores and performance.
 
-## Credits -
+## Favicon & App Launcher Icons for PWA -
 
-Logo Vector taken from [PNGtree](https://pngtree.com/free-vectors).
+Designed by me with Illustrator.
 
 ## Available Scripts
 
