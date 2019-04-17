@@ -88,7 +88,7 @@ self.__precacheManifest = [
     "url": "/drum-kit/static/media/tom.572ed39d.wav"
   },
   {
-    "revision": "369d47890b5184ecc4bffb0ff25f2188",
+    "revision": "f2f96742abd796536b3071ffe482d5dd",
     "url": "/drum-kit/index.html"
   }
 ];
