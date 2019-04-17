@@ -1,5 +1,5 @@
 {
-  "main.css": "/drum-kit/static/css/main.0b6cbce6.chunk.css",
+  "main.css": "/drum-kit/static/css/main.15b1c310.chunk.css",
   "main.js": "/drum-kit/static/js/main.52cada1b.chunk.js",
   "main.js.map": "/drum-kit/static/js/main.52cada1b.chunk.js.map",
   "runtime~main.js": "/drum-kit/static/js/runtime~main.3ae46f20.js",
@@ -7,9 +7,9 @@
   "static/js/2.b527b123.chunk.js": "/drum-kit/static/js/2.b527b123.chunk.js",
   "static/js/2.b527b123.chunk.js.map": "/drum-kit/static/js/2.b527b123.chunk.js.map",
   "index.html": "/drum-kit/index.html",
-  "precache-manifest.e7f9cfe7fcb6d22c92d27c48f1d63aac.js": "/drum-kit/precache-manifest.e7f9cfe7fcb6d22c92d27c48f1d63aac.js",
+  "precache-manifest.ad1383b716dc5c70157e5d217d4dbd73.js": "/drum-kit/precache-manifest.ad1383b716dc5c70157e5d217d4dbd73.js",
   "service-worker.js": "/drum-kit/service-worker.js",
-  "static/css/main.0b6cbce6.chunk.css.map": "/drum-kit/static/css/main.0b6cbce6.chunk.css.map",
+  "static/css/main.15b1c310.chunk.css.map": "/drum-kit/static/css/main.15b1c310.chunk.css.map",
   "static/media/a.wav": "/drum-kit/static/media/a.3f9fdf5d.wav",
   "static/media/boom.wav": "/drum-kit/static/media/boom.550be808.wav",
   "static/media/c.wav": "/drum-kit/static/media/c.bb267ae5.wav",
