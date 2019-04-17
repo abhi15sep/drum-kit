@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Ropa+Sans");
-
 .App {
   text-align: center;
   -webkit-user-select: none;
@@ -22,8 +20,9 @@
   border: 2px solid black;
   padding: 0.5rem;
   width: min-content;
-  /* background: #000000; */
-  background: url("https://i.postimg.cc/63CgTZBc/maxresdefault.jpg") #222222;
+  /* background: url("https://i.postimg.cc/63CgTZBc/maxresdefault.jpg") #222222; */
+  background: url("https://github.com/abhishekakade/my-files/blob/master/background.webp?raw=true")
+    #222222;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
