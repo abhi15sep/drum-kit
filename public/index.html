@@ -3,16 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+
+    <!-- Original font unoptimised but working link -->
     <!-- <link
-      rel="preconnect"
-      as="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Ropa+Sans"
-      crossorigin
-    /> -->
-    <link
       href="https://fonts.googleapis.com/css?family=Ropa+Sans"
       rel="stylesheet"
+    /> -->
+
+    <!-- Font optimised for faster loading. @font-face added in App.css is necessary for this optimisation -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/ropasans/v8/EYqxmaNOzLlWtsZSScy6XTNpcZGf2w.woff2"
+      as="font"
+      crossorigin
     />
+
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no"
