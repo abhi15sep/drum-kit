@@ -132,7 +132,7 @@
   }
 
   .sound-name {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
   }
 }
 
@@ -148,7 +148,7 @@
   }
 
   .sound-name {
-    font-size: 1.1rem;
+    font-size: 1.1rem !important;
   }
 }
 
@@ -158,11 +158,11 @@
   }
 
   .sound-name {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 410px) {
   #drum-machine {
     grid-template-columns: 29vw 29vw 29vw;
     font-weight: normal;
@@ -175,11 +175,11 @@
   }
 
   .keyboard-key {
-    font-size: 1.25rem;
+    font-size: 1.25rem !important;
   }
 
   .sound-name {
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
   }
 
   .switcher {
@@ -200,16 +200,8 @@
   }
 
   .keyboard-key {
-    font-size: 1.25rem;
+    font-size: 1.2rem !important;
   }
-
-  /* .sound-name {
-    font-size: 0.9rem;
-  }
-
-  .switcher {
-    font-size: 0.9rem;
-  } */
 }
 
 /* iPad */
