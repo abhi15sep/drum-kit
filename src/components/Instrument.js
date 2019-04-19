@@ -1,23 +1,23 @@
 import React, { Component } from "react";
-import clap from "../sounds/drum/clap.wav";
-import boom from "../sounds/drum/boom.wav";
-import hihat from "../sounds/drum/hihat.wav";
-import kick from "../sounds/drum/kick.wav";
-import openhat from "../sounds/drum/openhat.wav";
-import ride from "../sounds/drum/ride.wav";
-import snare from "../sounds/drum/snare.wav";
-import tink from "../sounds/drum/tink.wav";
-import tom from "../sounds/drum/tom.wav";
+import clap from "../sounds/drum/clap.mp3";
+import boom from "../sounds/drum/boom.mp3";
+import hihat from "../sounds/drum/hihat.mp3";
+import kick from "../sounds/drum/kick.mp3";
+import openhat from "../sounds/drum/openhat.mp3";
+import ride from "../sounds/drum/ride.mp3";
+import snare from "../sounds/drum/snare.mp3";
+import tink from "../sounds/drum/tink.mp3";
+import tom from "../sounds/drum/tom.mp3";
 
-import q from "../sounds/piano/q.wav";
-import w from "../sounds/piano/w.wav";
-import e from "../sounds/piano/e.wav";
-import a from "../sounds/piano/a.wav";
-import s from "../sounds/piano/s.wav";
-import d from "../sounds/piano/d.wav";
-import z from "../sounds/piano/z.wav";
-import x from "../sounds/piano/x.wav";
-import c from "../sounds/piano/c.wav";
+import q from "../sounds/piano/q.mp3";
+import w from "../sounds/piano/w.mp3";
+import e from "../sounds/piano/e.mp3";
+import a from "../sounds/piano/a.mp3";
+import s from "../sounds/piano/s.mp3";
+import d from "../sounds/piano/d.mp3";
+import z from "../sounds/piano/z.mp3";
+import x from "../sounds/piano/x.mp3";
+import c from "../sounds/piano/c.mp3";
 
 const drumCollection = [
   {
