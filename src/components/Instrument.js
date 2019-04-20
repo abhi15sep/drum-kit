@@ -134,30 +134,37 @@ const pianoCollection = [
 ];
 
 export default class Instrument extends Component {
-  render() {
+  componentDidUpdate(prevProps) {
+    // console.log(prevProps.activeInstrument);
     const { activeInstrument } = this.props;
 
-    let soundsArray = [];
+    if (prevProps.activeInstrument !== activeInstrument) {
+      // console.log("need update!");
 
-    if (activeInstrument === "Piano") {
-      soundsArray = pianoCollection;
-    } else if (activeInstrument === "Drumkit") {
-      soundsArray = drumCollection;
+      let soundsArray = [];
+
+      if (activeInstrument === "Piano") {
+        soundsArray = pianoCollection;
+      } else if (activeInstrument === "Drumkit") {
+        soundsArray = drumCollection;
+      }
+
+      const audioElemArray = document.querySelectorAll("audio");
+      const spanSoundNames = document.querySelectorAll(".sound-name");
+
+      // Adds src to the audio tags
+      audioElemArray.forEach((elem, index) => {
+        elem.src = soundsArray[index].src;
+      });
+
+      // Adds sound name to the keys
+      spanSoundNames.forEach(
+        (elem, index) => (elem.textContent = soundsArray[index].id)
+      );
     }
+  }
 
-    const audioElemArray = document.querySelectorAll("audio");
-    const spanSoundNames = document.querySelectorAll(".sound-name");
-
-    // Adds src to the audio tags
-    audioElemArray.forEach((elem, index) => {
-      elem.src = soundsArray[index].src;
-    });
-
-    // Adds sound name to the keys
-    spanSoundNames.forEach(
-      (elem, index) => (elem.textContent = soundsArray[index].id)
-    );
-
+  render() {
     return (
       <div id="drum-machine" style={{ margin: "auto" }}>
         <div data-key="81" className="drum-pad" id="sound1">
