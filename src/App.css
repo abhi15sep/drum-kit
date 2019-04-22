@@ -162,8 +162,7 @@
 
 @media screen and (max-width: 415px) {
   #drum-machine .drum-pad .sound-name {
-    font-size: 14px;
-    color: red;
+    font-size: 15px;
   }
 
   #drum-machine .keyboard-key {
