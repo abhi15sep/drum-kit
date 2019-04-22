@@ -166,7 +166,7 @@ export default class Instrument extends Component {
 
   render() {
     return (
-      <div id="drum-machine" style={{ margin: "auto" }}>
+      <main id="drum-machine" style={{ margin: "auto" }}>
         <div data-key="81" className="drum-pad" id="sound1">
           <span className="keyboard-key">Q</span>
           <audio id="Q" className="clip" data-key="81" src={q} />
@@ -220,7 +220,7 @@ export default class Instrument extends Component {
           <audio id="C" className="clip" data-key="67" src={c} />
           <span className="sound-name">Chord G#</span>
         </div>
-      </div>
+      </main>
     );
   }
 }

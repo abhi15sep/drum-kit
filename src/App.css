@@ -33,9 +33,9 @@
   margin: 0.5rem;
   padding: 0.75rem 0.5rem;
   border: 2px solid #dddddd;
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.75);
   text-shadow: 0 0 10px #000000;
-  color: #dddddd;
+  color: #eeeeee;
   overflow: hidden;
 }
 
@@ -49,10 +49,10 @@
 }
 
 .sound-name {
-  font-size: 1.2rem;
+  font-size: 1.2rem !important;
   text-transform: capitalize;
   display: block;
-  color: #bbbbbb;
+  color: #cccccc;
   margin: 0.25rem auto;
 }
 
@@ -83,6 +83,12 @@
   border-radius: 0 3px 3px 0;
   border: 2px solid black;
   border-left: 1px solid black;
+}
+
+#pianoId:focus,
+#drumId:focus {
+  outline: none;
+  box-shadow: 0 0 10px 3px #333;
 }
 
 .switcher {
@@ -144,6 +150,10 @@
     grid-template-columns: 28vw 28vw 28vw;
   }
 
+  .keyboard-key {
+    font-size: 1.25rem;
+  }
+
   .sound-name {
     font-size: 1rem !important;
   }
@@ -159,14 +169,6 @@
 
   .drum-pad {
     margin: 0.35rem;
-  }
-
-  .keyboard-key {
-    font-size: 1.25rem !important;
-  }
-
-  .sound-name {
-    font-size: 0.9rem !important;
   }
 
   .switcher {
@@ -188,6 +190,10 @@
 
   .keyboard-key {
     font-size: 1.2rem !important;
+  }
+
+  .sound-name {
+    font-size: 0.9rem !important;
   }
 }
 

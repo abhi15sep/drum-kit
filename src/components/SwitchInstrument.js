@@ -12,26 +12,28 @@ export default class SwitchInstrument extends Component {
           Yahallo!
         </div>
 
-        <h3 id="switch-heading">Switch Instrument</h3>
+        <h2 id="switch-heading">Switch Instrument</h2>
 
         <div
           id="switch-container"
           style={{ display: "flex", justifyContent: "center" }}
         >
-          <div
+          <button
+            aria-label="Select Piano"
             id="pianoId"
             onClick={changeInstrument}
             className="switcher enabled-switch"
           >
             Piano
-          </div>
-          <div
+          </button>
+          <button
+            aria-label="Select Drumkit"
             id="drumId"
             onClick={changeInstrument}
             className="switcher disabled-switch"
           >
             Drumkit
-          </div>
+          </button>
         </div>
       </div>
     );
