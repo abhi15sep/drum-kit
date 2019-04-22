@@ -150,19 +150,20 @@
     grid-template-columns: 28vw 28vw 28vw;
   }
 
-  .keyboard-key {
-    font-size: 1.25rem;
+  #drum-machine .drum-pad .keyboard-key {
+    font-size: 1.25rem !important;
+    font-weight: bold;
   }
 
-  .sound-name {
+  #drum-machine .drum-pad .sound-name {
     font-size: 1rem !important;
   }
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 415px) {
   #drum-machine {
     grid-template-columns: 29vw 29vw 29vw;
-    font-weight: normal;
+    /* font-weight: normal; */
     padding: 0.25rem;
     align-self: center;
   }
