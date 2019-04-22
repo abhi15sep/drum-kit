@@ -121,7 +121,7 @@
 
 @media screen and (max-width: 800px) {
   .sound-name {
-    font-size: 1.2rem !important;
+    font-size: 1.2rem;
   }
 
   #drum-machine {
@@ -137,7 +137,7 @@
 
 @media screen and (max-width: 560px) {
   .sound-name {
-    font-size: 1.1rem !important;
+    font-size: 1.1rem;
   }
 
   #drum-machine {
@@ -185,7 +185,7 @@
 
 @media screen and (max-width: 340px) {
   .keyboard-key {
-    font-size: 1.2rem !important;
+    font-size: 1.2rem;
   }
 
   .sound-name {
@@ -237,7 +237,7 @@
   }
 
   #switch-heading {
-    font-size: 2rem !important;
+    font-size: 2rem;
   }
 }
 
@@ -278,7 +278,7 @@
   }
 
   #switch-heading {
-    font-size: 2.5rem !important;
+    font-size: 2.5rem;
   }
 
   .switcher {
