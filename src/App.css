@@ -146,20 +146,25 @@
 }
 
 @media screen and (max-width: 480px) {
-  #drum-machine .drum-pad .keyboard-key {
-    font-size: 1.25rem !important;
-    font-weight: bold;
-  }
-
   #drum-machine {
     grid-template-columns: 28vw 28vw 28vw;
+  }
+
+  #drum-machine .keyboard-key {
+    font-size: 1.25rem;
+    font-weight: bold;
   }
 }
 
 @media screen and (max-width: 415px) {
   #drum-machine .drum-pad .sound-name {
     font-size: 1rem;
-    color: coral;
+    color: red;
+  }
+
+  #drum-machine .keyboard-key {
+    font-size: 1.25rem;
+    font-weight: bold;
   }
 
   #drum-machine {
