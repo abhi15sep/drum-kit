@@ -63,9 +63,6 @@ class App extends Component {
     // let switchInstrument = document.getElementById("");
     const pianoIdVar = document.getElementById("pianoId");
     const drumIdVar = document.getElementById("drumId");
-    document
-      .querySelectorAll(".sound-name")
-      .forEach(elem => (elem.style.fontSize = "1rem"));
 
     if (e.target.id === "drumId") {
       drumIdVar.classList.remove("disabled-switch");

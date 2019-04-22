@@ -120,9 +120,9 @@
 }
 
 @media screen and (max-width: 800px) {
-  /* .sound-name {
+  .sound-name {
     font-size: 1.2rem;
-  } */
+  }
 
   #drum-machine {
     grid-template-columns: 18vw 18vw 18vw;
@@ -136,38 +136,30 @@
 }
 
 @media screen and (max-width: 560px) {
-  /* .sound-name {
+  .sound-name {
     font-size: 1.1rem;
-  } */
+  }
 
   #drum-machine {
     grid-template-columns: 25vw 25vw 25vw;
   }
 }
 
-@media screen and (max-width: 480px) {
-  /* .sound-name {
-    font-size: 16px;
-    color: coral;
-  } */
-
+@media screen and (max-width: 420px) {
   #drum-machine {
-    grid-template-columns: 28vw 28vw 28vw;
+    grid-template-columns: 30vw 30vw 30vw;
+    padding: 0.25rem;
+    align-self: center;
+  }
+
+  .sound-name {
+    font-size: 14px;
   }
 
   .keyboard-key {
     font-size: 1.25rem;
     font-weight: bold;
   }
-}
-
-@media screen and (max-width: 415px) {
-  #drum-machine {
-    grid-template-columns: 29vw 29vw 29vw;
-    padding: 0.25rem;
-    align-self: center;
-  }
-
   .drum-pad {
     margin: 0.35rem;
   }
@@ -178,11 +170,6 @@
     font-weight: normal;
     font-size: 1.2rem;
   }
-
-  /* .sound-name {
-    font-size: 0.9rem;
-    font-weight: normal;
-  } */
 
   #drum-machine {
     grid-template-columns: 30vw 30vw 30vw;
