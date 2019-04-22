@@ -147,7 +147,8 @@
 
 @media screen and (max-width: 480px) {
   /* .sound-name {
-    font-size: 1.1rem;
+    font-size: 16px;
+    color: coral;
   } */
 
   #drum-machine {
@@ -161,28 +162,14 @@
 }
 
 @media screen and (max-width: 415px) {
-  /* .sound-name {
-    font-size: 15px;
-  } */
-
-  .keyboard-key {
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
-
   #drum-machine {
     grid-template-columns: 29vw 29vw 29vw;
-    /* font-weight: normal; */
     padding: 0.25rem;
     align-self: center;
   }
 
   .drum-pad {
     margin: 0.35rem;
-  }
-
-  .switcher {
-    font-size: 0.9rem;
   }
 }
 
