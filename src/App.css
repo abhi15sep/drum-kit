@@ -172,6 +172,10 @@
     margin: 0.35rem;
   }
 
+  #drum-machine .drum-pad .sound-name {
+    font-size: 16px !important;
+  }
+
   .switcher {
     font-size: 0.9rem;
   }
