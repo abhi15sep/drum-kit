@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/drum-kit/static/media/x.7c5944a6.mp3"
   },
   {
-    "revision": "8a5deaf10e838f8b83ce",
-    "url": "/drum-kit/static/css/main.cdf94a75.chunk.css"
+    "revision": "6092e0bdb99ae9ad2b42",
+    "url": "/drum-kit/static/css/main.7fdc433a.chunk.css"
   },
   {
     "revision": "7b6327eefb8c5630e0e5",
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/drum-kit/static/media/z.e183aa14.mp3"
   },
   {
-    "revision": "8a5deaf10e838f8b83ce",
-    "url": "/drum-kit/static/js/main.8cf2614d.chunk.js"
+    "revision": "6092e0bdb99ae9ad2b42",
+    "url": "/drum-kit/static/js/main.d8ea3097.chunk.js"
   },
   {
     "revision": "268148d2fc754765cae367e6e8d602cb",
@@ -88,7 +88,7 @@ self.__precacheManifest = [
     "url": "/drum-kit/static/media/tom.4a254717.mp3"
   },
   {
-    "revision": "89686b6d2fa5ee35e7110a7817f5c2bc",
+    "revision": "51cc3ac30282318d258be3d68a5a5042",
     "url": "/drum-kit/index.html"
   }
 ];
