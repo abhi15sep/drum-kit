@@ -146,6 +146,10 @@
 }
 
 @media screen and (max-width: 480px) {
+  .sound-name {
+    font-size: 1.1rem;
+  }
+
   #drum-machine {
     grid-template-columns: 28vw 28vw 28vw;
   }
@@ -158,7 +162,7 @@
 
 @media screen and (max-width: 415px) {
   #drum-machine .drum-pad .sound-name {
-    font-size: 1rem;
+    font-size: 14px;
     color: red;
   }
 
