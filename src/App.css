@@ -120,9 +120,9 @@
 }
 
 @media screen and (max-width: 800px) {
-  .sound-name {
+  /* .sound-name {
     font-size: 1.2rem;
-  }
+  } */
 
   #drum-machine {
     grid-template-columns: 18vw 18vw 18vw;
@@ -136,9 +136,9 @@
 }
 
 @media screen and (max-width: 560px) {
-  .sound-name {
+  /* .sound-name {
     font-size: 1.1rem;
-  }
+  } */
 
   #drum-machine {
     grid-template-columns: 25vw 25vw 25vw;
@@ -146,26 +146,26 @@
 }
 
 @media screen and (max-width: 480px) {
-  .sound-name {
+  /* .sound-name {
     font-size: 1.1rem;
-  }
+  } */
 
   #drum-machine {
     grid-template-columns: 28vw 28vw 28vw;
   }
 
-  #drum-machine .keyboard-key {
+  .keyboard-key {
     font-size: 1.25rem;
     font-weight: bold;
   }
 }
 
 @media screen and (max-width: 415px) {
-  #drum-machine .drum-pad .sound-name {
+  /* .sound-name {
     font-size: 15px;
-  }
+  } */
 
-  #drum-machine .keyboard-key {
+  .keyboard-key {
     font-size: 1.25rem;
     font-weight: bold;
   }
@@ -188,17 +188,18 @@
 
 @media screen and (max-width: 340px) {
   .keyboard-key {
+    font-weight: normal;
     font-size: 1.2rem;
   }
 
-  .sound-name {
+  /* .sound-name {
     font-size: 0.9rem;
     font-weight: normal;
-  }
+  } */
 
   #drum-machine {
     grid-template-columns: 30vw 30vw 30vw;
-    font-weight: 400;
+    font-weight: normal;
     padding: 0.25rem;
     align-self: center;
   }
