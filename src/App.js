@@ -85,9 +85,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1 id="heading">{this.state.activeInstrument}</h1>
-        <div className="container">
+      <div className='App'>
+        <h1 id='heading'>{this.state.activeInstrument}</h1>
+        <div className='container'>
           <Instrument activeInstrument={this.state.activeInstrument} />
           <SwitchInstrument changeInstrument={this.changeActiveInstrument} />
         </div>
